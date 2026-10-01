@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071522">
+    <meta name="description" content="A unified customer support demo for billing clarity, home connectivity troubleshooting, and agent-assisted resolution.">
+    <title>OneCare | Customer Support Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#home" aria-label="OneCare home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5 27 9.8v12.4L16 28.5 5 22.2V9.8L16 3.5Z" stroke="currentColor" stroke-width="1.7"/><path d="m10.5 16 3.6 3.6 7.7-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="brand-copy"><strong>onecare</strong><small>customer intelligence</small></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-view="live" aria-current="page" aria-label="Live resolution">
+            <span class="nav-icon">◈</span><span>Live resolution</span><span class="nav-indicator"></span>
+          </button>
+          <button class="nav-link" data-view="walkthrough" aria-label="Executive walkthrough">
+            <span class="nav-icon">▷</span><span>Executive walkthrough</span>
+          </button>
+          <button class="nav-link" data-view="architecture" aria-label="Microsoft architecture">
+            <span class="nav-icon">▦</span><span>Microsoft architecture</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-rule"></div>
+        <div class="workspace-label scenario-label">DEMO SCENARIOS <span class="scenario-count">03</span></div>
+        <div class="scenario-nav" id="scenario-nav">
+          <button class="scenario-nav-item selected" data-scenario="combined" aria-label="One connected case: bill and home internet" aria-pressed="true">
+            <span class="scenario-symbol symbol-combined">↗</span>
+            <span><strong>One connected case</strong><small>Bill + home internet</small></span>
+            <span class="selection-dot"></span>
+          </button>
+          <button class="scenario-nav-item" data-scenario="billing" aria-label="Bill clarity: unexpected increase" aria-pressed="false">
+            <span class="scenario-symbol symbol-billing">$</span>
+            <span><strong>Bill clarity</strong><small>Unexpected increase</small></span>
+            <span class="selection-dot"></span>
+          </button>
+          <button class="scenario-nav-item" data-scenario="network" aria-label="Network recovery: slow, dropping Wi-Fi" aria-pressed="false">
+            <span class="scenario-symbol symbol-network">⌁</span>
+            <span><strong>Network recovery</strong><small>Slow, dropping Wi-Fi</small></span>
+            <span class="selection-dot"></span>
+          </button>
+        </div>
+
+        <div class="sidebar-bottom">
+          <div class="demo-status"><span class="status-pulse"></span><span><strong>Demo environment</strong><small>Illustrative data · no live systems</small></span></div>
+          <div class="profile">
+            <div class="avatar avatar-small">MC</div>
+            <span><strong>Morgan Chen</strong><small>Experience lead</small></span>
+            <span class="profile-menu">•••</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="home">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Customer operations</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Live resolution</strong></div>
+          <div class="topbar-right">
+            <span class="environment-pill"><span></span> CONCEPT DEMO</span>
+            <button class="icon-button" aria-label="Help and information" title="Illustrative concept demo">?</button>
+            <div class="avatar avatar-top">MC</div>
+          </div>
+        </header>
+
+        <section class="view-panel active" id="view-live" aria-labelledby="page-title">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line"></span> ONE CUSTOMER. ONE CONTINUOUS CONVERSATION.</div>
+              <h1 id="page-title">Support that sees the <span>whole picture.</span></h1>
+              <p>Resolve billing questions and home internet issues together—with coordinated AI and a human in control.</p>
+            </div>
+            <button class="button button-primary" id="restart-demo"><span class="button-icon">↻</span> Restart scenario</button>
+          </div>
+
+          <div class="scenario-picker" aria-label="Choose a demonstration scenario">
+            <button class="scenario-card selected" data-scenario="combined" aria-pressed="true">
+              <span class="scenario-card-icon icon-dual">↗</span>
+              <span class="scenario-card-copy"><strong>Bill + connectivity</strong><small>A single case, end to end</small></span>
+              <span class="scenario-card-tag">FEATURED</span>
+            </button>
+            <button class="scenario-card" data-scenario="billing" aria-pressed="false">
+              <span class="scenario-card-icon icon-money">$</span>
+              <span class="scenario-card-copy"><strong>Understand my bill</strong><small>Explain the change. Find options.</small></span>
+            </button>
+            <button class="scenario-card" data-scenario="network" aria-pressed="false">
+              <span class="scenario-card-icon icon-wifi">⌁</span>
+              <span class="scenario-card-copy"><strong>Fix my home internet</strong><small>Diagnose. Resolve. Verify.</small></span>
+            </button>
+          </div>
+
+          <div class="case-strip">
+            <div class="case-customer">
+              <div class="avatar avatar-customer">ST</div>
+              <span><strong>Sarah Thompson</strong><small>Customer since 2016 <i>·</i> Preferred customer</small></span>
+            </div>
+            <span class="case-divider"></span>
+            <div class="case-meta"><span class="meta-label">CASE</span><strong id="case-id">OC-24081</strong></div>
+            <span class="case-divider case-divider-wide"></span>
+            <div class="case-meta"><span class="meta-label">CONTACT CHANNEL</span>            <div class="channel-switch" role="group" aria-label="Choose customer contact channel"><button class="channel-option selected" data-channel="app" aria-pressed="true">App</button><button class="channel-option" data-channel="web" aria-pressed="false">Web</button><button class="channel-option" data-channel="phone" aria-pressed="false">Phone</button></div></div>
+            <span class="case-end-status"><span class="status-pulse"></span> <span id="case-status">Ready to start</span></span>
+          </div>
+
+          <div class="workspace-grid">
+            <section class="panel conversation-panel" aria-labelledby="conversation-title">
+              <div class="panel-heading conversation-heading">
+                <div class="panel-title-wrap"><span class="panel-icon conversation-icon">✳</span><div><h2 id="conversation-title">Customer conversation</h2><p id="conversation-subtitle">A continuous conversation across any channel</p></div></div>
+                <span class="live-badge"><span></span> <span id="conversation-badge">READY</span></span>
+              </div>
+              <div class="conversation-context" id="conversation-context">
+                <div class="context-mark">“</div><p>Sarah reached out about a bill increase—and mentions her home internet has been unreliable too.</p><span>Customer opening</span>
+              </div>
+              <div class="transcript" id="transcript" aria-live="polite">
+                <div class="empty-transcript">
+                  <span class="empty-orbit"><span>✳</span></span>
+                  <strong>Your conversation starts here</strong>
+                  <p>Start the guided demo to see the customer, service, billing and AI work together in one case.</p>
+                </div>
+              </div>
+              <div class="conversation-footer">
+                <div class="secure-note"><span class="secure-icon">⌑</span> Secure, consent-aware support</div>
+                <button class="button button-primary button-start" id="next-step"><span>▷</span><span id="next-step-label">Start guided resolution</span><span class="button-arrow">→</span></button>
+              </div>
+            </section>
+
+            <aside class="side-column">
+              <section class="panel context-panel" aria-labelledby="customer-context-title">
+                <div class="panel-heading compact-heading">
+                  <div class="panel-title-wrap"><span class="panel-icon customer-icon">◎</span><div><h2 id="customer-context-title">Customer 360</h2><p>Shared context, available in the moment</p></div></div>
+                  <button class="more-button" aria-label="More customer context options">···</button>
+                </div>
+                <div class="account-product"><div><span class="meta-label">CURRENT PLAN</span><strong id="plan-name">Fibre 1 Gig + Home Wi-Fi</strong></div><span class="plan-chip">ACTIVE</span></div>
+                <div class="metric-row">
+                  <div class="mini-metric"><span class="meta-label">MONTHLY BILL</span><strong id="bill-total">$164.32</strong><small id="bill-change">↑ $23.00 this month</small></div>
+                  <div class="mini-metric"><span class="meta-label">NETWORK HEALTH</span><strong id="network-health">Needs attention</strong><small id="network-detail">Intermittent dropouts</small></div>
+                </div>
+                <div class="recent-context"><span class="meta-label">RECENT ACCOUNT SIGNALS</span><div class="signal-list" id="signal-list"></div></div>
+              </section>
+
+              <section class="panel agents-panel" aria-labelledby="agents-title">
+                <div class="panel-heading compact-heading">
+                  <div class="panel-title-wrap"><span class="panel-icon agents-icon">✣</span><div><h2 id="agents-title">Specialist agents</h2><p><span id="agents-active-count">0</span> active <span class="tiny-separator">·</span> human oversight</p></div></div>
+                  <span class="orchestrator-chip"><span class="orchestrator-spark">✳</span> ORCHESTRATED</span>
+                </div>
+                <div class="agent-list" id="agent-list"></div>
+                <div class="human-note"><span class="human-icon">◎</span><span><strong>Human agent stays in control</strong><small>Approves customer-impacting actions</small></span><span class="human-check">✓</span></div>
+              </section>
+            </aside>
+          </div>
+          <div class="page-footnote"><span class="footnote-icon">i</span> Concept experience with simulated customer and system data. Outcomes shown are illustrative—not a production integration or commitment.</div>
+        </section>
+
+        <section class="view-panel secondary-view" id="view-walkthrough" aria-labelledby="walkthrough-title" hidden>
+          <div class="page-heading secondary-heading">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> EXECUTIVE DEMO · 4 MINUTES</div><h1 id="walkthrough-title">A better answer starts with <span>one case.</span></h1><p>Follow a customer from “my bill is up” to a clear explanation and a verified home internet fix.</p></div>
+            <button class="button button-primary" id="walkthrough-start"><span>▷</span> <span id="walkthrough-play-label">Play walkthrough</span></button>
+          </div>
+          <div class="walkthrough-layout">
+            <section class="panel story-panel">
+              <div class="story-topline"><span class="story-step-count">THE CUSTOMER STORY</span><span id="story-progress-label">01 / 07</span></div>
+              <div class="story-progress-track"><span id="story-progress"></span></div>
+              <div class="story-content">
+                <div class="story-visual" id="story-visual"><div class="visual-glow"></div><div class="visual-card"><span class="visual-tag">CUSTOMER MESSAGE</span><strong>“My bill is higher, and my Wi-Fi keeps dropping.”</strong><div class="visual-customer"><span class="avatar avatar-customer">ST</span><span>Sarah Thompson <small>One customer · one case</small></span></div></div><span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span></div>
+                <div class="story-copy"><span class="story-kicker" id="story-kicker">THE MOMENT</span><h2 id="story-heading">Two problems. One conversation.</h2><p id="story-description">Sarah contacts support because her bill increased by $23 and her connection has been dropping. She should not have to call twice, repeat herself, or figure out which department owns the problem.</p><div class="story-takeaway"><span class="takeaway-icon">✳</span><span id="story-takeaway">Start with the customer's need—not the channel or the org chart.</span></div></div>
+              </div>
+              <div class="story-controls"><button class="button button-secondary" id="story-previous" disabled>← <span>Previous</span></button><span class="story-current-title" id="story-current-title">01 &nbsp; The moment</span><button class="button button-secondary" id="story-next"><span>Next</span> →</button></div>
+            </section>
+            <aside class="panel walkthrough-agents">
+              <div class="panel-heading compact-heading"><div class="panel-title-wrap"><span class="panel-icon agents-icon">✣</span><div><h2>Who works behind the scenes</h2><p>Specialists coordinate around one outcome</p></div></div></div>
+              <div class="walkthrough-agent-list" id="walkthrough-agent-list"></div>
+              <div class="executive-outcome"><span class="outcome-spark">✳</span><div><strong>One joined-up resolution</strong><p>Clear bill explanation, a network fix, and one documented case.</p></div></div>
+            </aside>
+          </div>
+          <div class="page-footnote"><span class="footnote-icon">i</span> This is an executive concept walkthrough. Steps and results are illustrative and do not represent live customer data or connected production systems.</div>
+        </section>
+
+        <section class="view-panel secondary-view" id="view-architecture" aria-labelledby="architecture-title" hidden>
+          <div class="page-heading secondary-heading">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> REFERENCE DESIGN · MICROSOFT CLOUD</div><h1 id="architecture-title">One platform. <span>Connected intelligence.</span></h1><p>A shared support fabric connects customer engagement, specialist AI, account truth and operational action.</p></div>
+            <span class="architecture-badge"><span class="status-pulse"></span> REFERENCE ARCHITECTURE</span>
+          </div>
+          <div class="architecture-intro"><span class="arch-intro-icon">↗</span><div><strong>Channel-neutral by design</strong><p>Phone, web and app are interchangeable entry points. Customer context, agent collaboration, governance and case history carry across the interaction.</p></div><div class="architecture-legend"><span><i class="legend-customer"></i> Customer experience</span><span><i class="legend-intelligence"></i> AI & orchestration</span><span><i class="legend-enterprise"></i> Enterprise systems</span></div></div>
+          <div class="architecture-flow" id="architecture-flow"></div>
+          <div class="architecture-footer-grid">
+            <section class="panel architecture-callout"><span class="callout-icon">⛨</span><div><span class="meta-label">TRUST & CONTROL · EVERY LAYER</span><strong>Identity, privacy and human accountability are built in.</strong><p>Microsoft Entra ID · Microsoft Purview · role-based access · consent and audit trails · approval gates for customer-impacting actions.</p></div></section>
+            <section class="panel architecture-callout"><span class="callout-icon analytics-icon">⌁</span><div><span class="meta-label">LEARNING LOOP</span><strong>Each resolved contact improves the operation.</strong><p>Microsoft Fabric and Power BI surface recurring billing questions, network fault patterns, resolution quality and customer effort.</p></div></section>
+          </div>
+          <div class="page-footnote"><span class="footnote-icon">i</span> Illustrative Microsoft reference architecture; specific products, connectors, availability and deployment choices require solution validation.</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
